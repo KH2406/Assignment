@@ -1,0 +1,43 @@
+Project Details and Workflow
+
+This project focuses on solving the problem of cart abandonment by segmenting users into meaningful groups and scoring them for re-engagement. The goal is to help marketers identify which users are most likely to convert if targeted with the right campaign.
+
+1. Dataset Creation
+Since no real data was available, I simulated a dataset of 5,000 users with realistic attributes such as:
+- Average order value (AOV)
+- Engagement score
+- Profitability score
+- Number of sessions in the last 30 days
+- Cart abandonment date and last order date
+
+Around 20% of users were marked as having abandoned a cart in the last 14 days, and the universe of interest was filtered to those who abandoned in the last 7 days.
+
+2. MECE Segmentation
+
+Users are segmented into buckets based on:
+- AOV: Low, Mid, High
+- Engagement: Low, Medium, High
+- Profitability: Low, High
+
+This ensures a MECE (Mutually Exclusive, Collectively Exhaustive) segmentation. Very small segments are merged up into parent groups, and overly large ones are split for balance.
+
+3. Scoring and Ranking
+Each segment is scored using multiple factors:
+- Conversion potential (engagement × recency)
+- Expected lift (simulated uplift from marketing)
+- Profitability
+- Strategic fit (based on AOV percentile)
+- Segment size (normalized)
+
+These are combined into an overall weighted score so segments can be ranked by priority.
+
+4. Agent Wrapper (LangChain-style)
+
+To make the workflow interactive, I built a simple agent wrapper with a prompt box.
+A user types a natural language prompt (e.g., “Segment users with AOV [1000,3000] and engagement [0.4,0.7]”).
+The backend runs the segmentation and scoring logic with those parameters.
+
+Results are written to files:
+agent_summary.csv – segment-level summary
+agent_segmented.csv – user-level segment assignments
+agent_segments.json – JSON version for integration

@@ -22,4 +22,4 @@ After running, you’ll see output files generated in Colab:(Working directory)
 - agent_segments.json (JSON format).
 
 Open router API Key would be require to run the final llm block, 
-Key : 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
+Free open router keys are availble on https://openrouter.ai/settings/keys 

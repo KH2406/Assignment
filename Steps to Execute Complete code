@@ -1,6 +1,6 @@
 Steps to Run
 1)Download the Notebook
- - Clone this repo or download the .ipynb file from GitHub.
+ - Clone this repo or download the .ipynb file from GitHub.[Assignment_Kaushal.ipynb]
  - Open in Google Colab
  - Go to Google Colab
  - Upload the .ipynb file.
@@ -20,3 +20,6 @@ After running, you’ll see output files generated in Colab:(Working directory)
 - agent_summary.csv (segment summary)
 - agent_segmented.csv (user-level assignments)
 - agent_segments.json (JSON format).
+
+Open router API Key would be require to run the final llm block, 
+Key : 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

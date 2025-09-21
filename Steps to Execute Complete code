@@ -1,0 +1,22 @@
+Steps to Run
+1)Download the Notebook
+ - Clone this repo or download the .ipynb file from GitHub.
+ - Open in Google Colab
+ - Go to Google Colab
+ - Upload the .ipynb file.
+ - Connect Runtime
+
+[In Colab, click Runtime → Connect to start a Python runtime.]
+- Run the Code Block by Block
+
+First block: installs dependencies.
+Second block: generates the dataset.
+Third block: segmentation + scoring logic.
+Final block: runs the agent wrapper with a simple prompt box.
+
+2) View Outputs
+
+After running, you’ll see output files generated in Colab:(Working directory)
+- agent_summary.csv (segment summary)
+- agent_segmented.csv (user-level assignments)
+- agent_segments.json (JSON format).
